@@ -1,0 +1,2 @@
+Número de videojuegos con popularidad 'alta': 5
+Número de videojuegos con popularidad 'media': 4
