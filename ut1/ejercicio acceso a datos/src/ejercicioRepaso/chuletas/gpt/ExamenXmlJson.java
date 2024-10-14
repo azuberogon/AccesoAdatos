@@ -3,7 +3,7 @@ package ejercicioRepaso.chuletas.gpt;
 
 
 
-
+/*
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -15,10 +15,10 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.*;
+import java.io.*;*/
 
-    public class ExamenXmlJson {
-        private String ruta;
+    public class ExamenXmlJson {}
+       /* private String ruta;
 
         public static void main(String[] args) {
             ExamenXmlJson examen = new ExamenXmlJson();
@@ -137,5 +137,5 @@ import java.io.*;
             }
         }
     }
-
+*/
 
