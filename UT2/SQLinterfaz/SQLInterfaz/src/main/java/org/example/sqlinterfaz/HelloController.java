@@ -25,10 +25,19 @@ public class HelloController {
     private TableColumn<Producto, Double> colPrecio;
 
     @FXML
+    private TableColumn<Producto, Integer> colCantidad; // Añadido correctamente con @FXML
+
+    @FXML
     private TextField nombreInput;
 
     @FXML
     private TextField precioInput;
+
+    @FXML
+    private TextField cantidadInput; // Campo para la entrada de cantidad
+
+    @FXML
+    private TextField filtroPrecioInput;
 
     @FXML
     private Label errorLabel;  // Etiqueta para mostrar errores
@@ -37,11 +46,9 @@ public class HelloController {
 
     @FXML
     public void initialize() {
-        // Vincular las columnas con los atributos del producto
         colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         colPrecio.setCellValueFactory(new PropertyValueFactory<>("precio"));
-
-        // Cargar los productos en la tabla al iniciar
+        colCantidad.setCellValueFactory(new PropertyValueFactory<>("cantidad"));  // Nueva columna cantidad
         actualizarTabla();
     }
 
@@ -49,17 +56,26 @@ public class HelloController {
     private void onAddProduct() {
         String nombre = nombreInput.getText();
         double precio;
+        int cantidad;
 
-        // Manejo de excepciones para el campo de precio
+        // Validar el campo de precio
         try {
             precio = Double.parseDouble(precioInput.getText());
         } catch (NumberFormatException e) {
             errorLabel.setText("Error: El precio debe ser un número.");
-            return; // Termina el método si hay un error
+            return;
+        }
+
+        // Validar el campo de cantidad
+        try {
+            cantidad = Integer.parseInt(cantidadInput.getText());
+        } catch (NumberFormatException e) {
+            errorLabel.setText("Error: La cantidad debe ser un número entero.");
+            return;
         }
 
         // Añadir producto a la base de datos
-        ProductoDao.addProducto(nombre, precio);
+        ProductoDao.addProducto(nombre, precio, cantidad);
 
         // Actualizar la tabla después de añadir el producto
         actualizarTabla();
@@ -67,18 +83,15 @@ public class HelloController {
         // Limpiar los campos de texto
         nombreInput.clear();
         precioInput.clear();
+        cantidadInput.clear();
         errorLabel.setText("");  // Limpiar el mensaje de error
     }
 
     @FXML
     private void onDeleteProduct() {
-        // Obtener el producto seleccionado de la tabla
         Producto productoSeleccionado = table.getSelectionModel().getSelectedItem();
         if (productoSeleccionado != null) {
-            // Eliminar el producto de la base de datos
             ProductoDao.deleteProducto(productoSeleccionado.getId());
-
-            // Actualizar la tabla después de eliminar el producto
             actualizarTabla();
         } else {
             errorLabel.setText("Error: Selecciona un producto para eliminar.");
@@ -87,32 +100,32 @@ public class HelloController {
 
     @FXML
     private void onRefreshTable() {
-        // Actualizar la tabla manualmente
         actualizarTabla();
         errorLabel.setText("");  // Limpiar el mensaje de error
     }
 
     private void actualizarTabla() {
-        // Obtener la lista de productos de la base de datos
         List<Producto> productos = ProductoDao.getAllProductos();
-        System.out.println("Productos obtenidos de la base de datos: " + productos.size());
-
-        // Depuración: imprimir los productos
-        for (Producto producto : productos) {
-            System.out.println(producto.toString());
-        }
-
-        // Convertir la lista de productos en un ObservableList para la tabla
         productosList = FXCollections.observableArrayList(productos);
-
-        // Depuración: verificar el tamaño de la lista observable antes de cargarla en la tabla
-        System.out.println("Elementos en productosList: " + productosList.size());
-
-        // Cargar los productos en la tabla
         table.setItems(productosList);
-
-        // Depuración: verificar el número de elementos en la tabla después de cargar los datos
-        System.out.println("Elementos en la tabla: " + table.getItems().size());
     }
 
+    @FXML
+    private void onFilterByPrecio() {
+        double precioMax;
+        try {
+            precioMax = Double.parseDouble(filtroPrecioInput.getText());
+        } catch (NumberFormatException e) {
+            errorLabel.setText("Error: El precio máximo debe ser un número.");
+            return;
+        }
+
+        List<Producto> productosFiltrados = ProductoDao.getAllProductos().stream()
+                .filter(producto -> producto.getPrecio() < precioMax)
+                .toList();
+
+        productosList = FXCollections.observableArrayList(productosFiltrados);
+        table.setItems(productosList);
+        errorLabel.setText("");  // Limpiar el mensaje de error
+    }
 }

@@ -1,6 +1,5 @@
 package org.example.sqlinterfaz;
 
-
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.scene.Scene;
@@ -17,6 +16,7 @@ import org.example.sqlinterfaz.dto.Producto;
 
 import java.io.IOException;
 import java.util.List;
+
 public class HelloApplication extends Application {
 
     private TableView<Producto> table;
@@ -24,6 +24,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // Crear la tabla si no existe
+        Database.eliminarTablaProductos();
         Database.createTable();
 
         // Inicializar la tabla
@@ -36,8 +37,11 @@ public class HelloApplication extends Application {
         TableColumn<Producto, Double> colPrecio = new TableColumn<>("Precio");
         colPrecio.setCellValueFactory(new PropertyValueFactory<>("precio")); // Vincular columna al campo precio
 
+        TableColumn<Producto, Integer> colCantidad = new TableColumn<>("Cantidad");
+        colCantidad.setCellValueFactory(new PropertyValueFactory<>("cantidad")); // Vincular columna al campo cantidad
+
         // Añadir columnas a la tabla
-        table.getColumns().addAll(colNombre, colPrecio);
+        table.getColumns().addAll(colNombre, colPrecio, colCantidad);
 
         // Cargar los datos en la tabla
         actualizarTabla();
@@ -49,13 +53,21 @@ public class HelloApplication extends Application {
         TextField precioInput = new TextField();
         precioInput.setPromptText("Precio del producto");
 
+        TextField cantidadInput = new TextField();
+        cantidadInput.setPromptText("Cantidad del producto");
+
         // Botón para añadir productos
         Button addButton = new Button("Añadir Producto");
         addButton.setOnAction(e -> {
-            ProductoDao.addProducto(nombreInput.getText(), Double.parseDouble(precioInput.getText()));
+            ProductoDao.addProducto(
+                    nombreInput.getText(),
+                    Double.parseDouble(precioInput.getText()),
+                    Integer.parseInt(cantidadInput.getText())
+            );
             actualizarTabla();
             nombreInput.clear();
             precioInput.clear();
+            cantidadInput.clear();
         });
 
         // Botón para eliminar productos
@@ -70,7 +82,7 @@ public class HelloApplication extends Application {
 
         // Disposición en VBox
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(table, nombreInput, precioInput, addButton, deleteButton);
+        vbox.getChildren().addAll(table, nombreInput, precioInput, cantidadInput, addButton, deleteButton);
 
         // Crear escena y mostrar ventana
         Scene scene = new Scene(vbox, 600, 400);

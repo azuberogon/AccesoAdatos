@@ -7,25 +7,32 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.example.sqlinterfaz.DataBase.Database.connect;
+
 public class ProductoDao {
 
-    public static void addProducto(String nombre, double precio) {
-        String sql = "INSERT INTO Productos(nombre, precio) VALUES(?, ?)";
+    // Añadir producto con la nueva columna 'cantidad'
+    public static void addProducto(String nombre, double precio, int cantidad) {
+        String sql = "INSERT INTO Productos(nombre, precio, cantidad) VALUES(?, ?, ?)";
 
-        try (Connection conn = Database.connect();
+        try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, nombre);
             pstmt.setDouble(2, precio);
+            pstmt.setInt(3, cantidad);  // Insertar la cantidad
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
 
+
+
+    // Eliminar producto
     public static void deleteProducto(int id) {
         String sql = "DELETE FROM Productos WHERE id = ?";
 
-        try (Connection conn = Database.connect();
+        try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, id);
             pstmt.executeUpdate();
@@ -34,11 +41,12 @@ public class ProductoDao {
         }
     }
 
+    // Obtener todos los productos
     public static List<Producto> getAllProductos() {
         List<Producto> productos = new ArrayList<>();
         String sql = "SELECT * FROM Productos";
 
-        try (Connection conn = Database.connect();
+        try (Connection conn = connect();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
 
@@ -46,7 +54,8 @@ public class ProductoDao {
                 Producto producto = new Producto(
                         rs.getInt("id"),
                         rs.getString("nombre"),
-                        rs.getDouble("precio")
+                        rs.getDouble("precio"),
+                        rs.getInt("cantidad")  // Obtener la cantidad de la base de datos
                 );
                 productos.add(producto);
             }
@@ -60,8 +69,4 @@ public class ProductoDao {
 
         return productos;
     }
-
-
-
-
 }

@@ -3,8 +3,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<?import javafx.scene.control.cell.PropertyValueFactory?>
 <VBox spacing="10" xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.example.sqlinterfaz.HelloController">
@@ -24,16 +22,28 @@
             <PropertyValueFactory property="precio"/>
           </cellValueFactory>
         </TableColumn>
+
+        <!-- Columna para la cantidad del producto -->
+        <TableColumn fx:id="colCantidad" text="Cantidad">
+          <cellValueFactory>
+            <PropertyValueFactory property="cantidad"/>
+          </cellValueFactory>
+        </TableColumn>
       </columns>
     </TableView>
 
+    <!-- Entrada para nombre y precio del producto -->
     <TextField fx:id="nombreInput" promptText="Nombre del producto"/>
     <TextField fx:id="precioInput" promptText="Precio del producto"/>
 
+    <!-- Botones para añadir, actualizar, eliminar y filtrar -->
     <Button text="Añadir Producto" onAction="#onAddProduct"/>
-    <Button text="Actualizar Tabla" onAction="#onRefreshTable"/> <!-- Nuevo botón para actualizar -->
+    <Button text="Actualizar Tabla" onAction="#onRefreshTable"/>
     <Button text="Eliminar Producto" onAction="#onDeleteProduct"/>
 
+    <!-- Entrada y botón para filtrar productos por precio -->
+    <TextField fx:id="filtroPrecioInput" promptText="Precio máximo para filtrar"/>
+    <Button text="Filtrar por Precio" onAction="#onFilterByPrecio"/>
 
     <!-- Etiqueta para mostrar errores -->
     <Label fx:id="errorLabel" textFill="red" />
