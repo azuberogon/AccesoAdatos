@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.sqlinterfaz.HelloController">
+  <children>
+    <TableView fx:id="table" prefHeight="200" prefWidth="600">
+      <columns>
+        <!-- Columna para el nombre del producto -->
+        <TableColumn fx:id="colNombre" text="Nombre">
+          <cellValueFactory>
+            <PropertyValueFactory property="nombre"/>
+          </cellValueFactory>
+        </TableColumn>
+
+        <!-- Columna para el precio del producto -->
+        <TableColumn fx:id="colPrecio" text="Precio">
+          <cellValueFactory>
+            <PropertyValueFactory property="precio"/>
+          </cellValueFactory>
+        </TableColumn>
+      </columns>
+    </TableView>
+
+    <TextField fx:id="nombreInput" promptText="Nombre del producto"/>
+    <TextField fx:id="precioInput" promptText="Precio del producto"/>
+
+    <Button text="Añadir Producto" onAction="#onAddProduct"/>
+    <Button text="Actualizar Tabla" onAction="#onRefreshTable"/> <!-- Nuevo botón para actualizar -->
+    <Button text="Eliminar Producto" onAction="#onDeleteProduct"/>
+
+
+    <!-- Etiqueta para mostrar errores -->
+    <Label fx:id="errorLabel" textFill="red" />
+  </children>
+</VBox>
