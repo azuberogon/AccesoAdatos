@@ -111,21 +111,22 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
 
         // Usa try-with-resources para cerrar automáticamente PreparedStatement y ResultSet
         try (Connection connection = MYSQLConnection.getInstancia().getConnection();
-             PreparedStatement pstmt = connection.prepareStatement(sql)) {
+             PreparedStatement pstmt = connection.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {
 
             pstmt.setInt(1, id); // Se establece el valor del parámetro
-
-            try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) {
-                    facturaSeleccionada = new Factura(
-                            rs.getInt("codigo"),
-                            rs.getString("destinatario"),
-                            rs.getInt("cuenta"),
-                            rs.getDouble("importe"),
-                            rs.getDate("fecha_hora").toLocalDate().atTime(rs.getTime("fecha_hora").toLocalTime())
-                    );
-                }
+            if (rs.next()) {
+                facturaSeleccionada = new Factura(
+                        rs.getInt("codigo"),
+                        rs.getString("destinatario"),
+                        rs.getInt("cuenta"),
+                        rs.getDouble("importe"),
+                        rs.getDate("fecha_hora").toLocalDate().atTime(rs.getTime("fecha_hora").toLocalTime())
+                );
             }
+
+        }catch (SQLException SQLE) {
+            System.out.println("Error al obtener la factura con con el id: " + facturaSeleccionada.getCodigo()+"error: " +SQLE);
         }
 
         return facturaSeleccionada; // Devuelve la factura seleccionada, si se encontró; de lo contrario, null
@@ -154,9 +155,9 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
             } else {
                 System.out.println("No se encontró ninguna factura con el código " + entity.getCodigo() + ".");
             }
-        } catch (SQLException e) {
-            System.out.println("Error en la conexión a la base de datos: " + e);
-            e.printStackTrace();
+        } catch (SQLException SQLE) {
+            System.out.println("Error en la conexión a la base de datos: " + SQLE);
+
         }
     }
 
