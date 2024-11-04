@@ -7,23 +7,27 @@ public class Factura {
 
 
     private int codigo;
-    private int cuenta;
     private String destinatario;
+    private int cuenta;
+    private double importe ;
     private LocalDateTime fecha_hora;
-    private double precio ;
 
 
-
-    public Factura(int codigo, String destinatario, int cuenta, double importe, LocalDateTime localDateTime) {
+    public Factura(int codigo, String destinatario, int cuenta, double importe, LocalDateTime fecha_hora) {
         this.codigo = codigo;
+        this.destinatario = destinatario;
         this.cuenta = cuenta;
-        this.destinatario = this.destinatario;
+        this.importe = importe;
         this.fecha_hora = fecha_hora;
-        this.precio = precio;
+    }
+    public Factura(int codigo, String destinatario, int cuenta, double importe ) {
+        this.codigo = codigo;
+        this.destinatario = destinatario;
+        this.cuenta = cuenta;
+        this.importe = importe;
+
     }
 
-    public Factura() {
-    }
 
     public int getCodigo() {
         return codigo;
@@ -31,14 +35,6 @@ public class Factura {
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
-    }
-
-    public int getCuenta() {
-        return cuenta;
-    }
-
-    public void setCuenta(int cuenta) {
-        this.cuenta = cuenta;
     }
 
     public String getDestinatario() {
@@ -49,6 +45,22 @@ public class Factura {
         this.destinatario = destinatario;
     }
 
+    public int getCuenta() {
+        return cuenta;
+    }
+
+    public void setCuenta(int cuenta) {
+        this.cuenta = cuenta;
+    }
+
+    public double getImporte() {
+        return importe;
+    }
+
+    public void setImporte(double importe) {
+        this.importe = importe;
+    }
+
     public LocalDateTime getFecha_hora() {
         return fecha_hora;
     }
@@ -56,23 +68,17 @@ public class Factura {
     public void setFecha_hora(LocalDateTime fecha_hora) {
         this.fecha_hora = fecha_hora;
     }
-
-    public double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
-
     @Override
     public String toString() {
-        return "Factura{" +
-                "codigo=" + codigo +
-                ", cuenta=" + cuenta +
-                ", desstinatario='" + destinatario + '\'' +
-                ", fecha_hora=" + fecha_hora +
-                ", precio=" + precio +
-                '}';
+        return "Factura {" +
+                "\ncodigo:" + codigo +
+                ",\n destinatario: '" + destinatario + '\'' +
+                ",\n cuenta: " + cuenta +
+                ",\n importe: " + importe+ "€" +
+                ",\n fecha y hora creacion: " + fecha_hora +
+                "\n"+'}'+"\n\n\n";
     }
+
+
+
 }
