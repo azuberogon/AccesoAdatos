@@ -56,7 +56,7 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
         Statement stmt = connection.createStatement();
         ResultSet rsFacturas  = stmt.executeQuery("SELECT * from Facturas");
         while (rsFacturas.next()){
-           facturas.add(new Factura(// la factura se ahace como el constructor
+           facturas.add(new Factura(// la factura se hace como el constructor
                    rsFacturas.getInt("codigo"),
                    rsFacturas.getString("destinatario"),
                    rsFacturas.getInt("cuenta"),
@@ -106,31 +106,67 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
     }
     @Override
     public Factura obtenerPorId(Integer id) throws SQLException {
-        String sql = "SELECT * FROM Facturas WHERE codigo = ?"; // Query de búsqueda en SQL
+
+       String sql = "SELECT * from Facturas where codigo = ?";
+       Factura facturaBuscada = null;
+       PreparedStatement pstmt= null;
+       try(Connection connection = MYSQLConnection.getInstancia().getConnection()){
+            pstmt = connection.prepareStatement(sql);
+           pstmt.setInt(1,id);
+            try(ResultSet rs = pstmt.executeQuery()){
+                if(rs.next()){
+                    facturaBuscada = new Factura(
+                            rs.getInt("codigo"),
+                            rs.getString("destinatario"),
+                            rs.getInt("cuenta"),
+                            rs.getDouble("importe"),
+                            rs.getTimestamp("fecha_hora").toLocalDateTime() // Convierte a LocalDateTime
+                    );
+                }
+            }
+       } catch (SQLException e) {
+           System.out.println("Error al obtener la factura con el código: " + id + " - Error: " + e);
+           e.printStackTrace();
+       }
+
+        return facturaBuscada;
+
+
+
+
+        /*String sql = "SELECT * FROM Facturas WHERE CODIGO = ?"; // Query de búsqueda en SQL
         Factura facturaSeleccionada = null;
 
-        // Usa try-with-resources para cerrar automáticamente PreparedStatement y ResultSet
+        // Usa try-with-resources para manejar Connection, PreparedStatement y ResultSet correctamente
         try (Connection connection = MYSQLConnection.getInstancia().getConnection();
-             PreparedStatement pstmt = connection.prepareStatement(sql);
-             ResultSet rs = pstmt.executeQuery()) {
+             PreparedStatement pstmt = connection.prepareStatement(sql)) {
 
-            pstmt.setInt(1, id); // Se establece el valor del parámetro
-            if (rs.next()) {
-                facturaSeleccionada = new Factura(
-                        rs.getInt("codigo"),
-                        rs.getString("destinatario"),
-                        rs.getInt("cuenta"),
-                        rs.getDouble("importe"),
-                        rs.getDate("fecha_hora").toLocalDate().atTime(rs.getTime("fecha_hora").toLocalTime())
-                );
+            pstmt.setInt(1, id); // Establece el valor del parámetro antes de ejecutar la consulta
+
+            try (ResultSet rs = pstmt.executeQuery()) { // Ejecuta la consulta después de configurar el parámetro
+                if (rs.next()) {
+                    facturaSeleccionada = new Factura(
+                            rs.getInt("codigo"),
+                            rs.getString("destinatario"),
+                            rs.getInt("cuenta"),
+                            rs.getDouble("importe"),
+                            rs.getTimestamp("fecha_hora").toLocalDateTime() // Usa getTimestamp para obtener fecha y hora directamente
+                    );
+                }
             }
-
-        }catch (SQLException SQLE) {
-            System.out.println("Error al obtener la factura con con el id: " + facturaSeleccionada.getCodigo()+"error: " +SQLE);
+        } catch (SQLException e) {
+            System.out.println("Error al obtener la factura con el id: " + id + " - Error: " + e);
+            e.printStackTrace();
         }
 
         return facturaSeleccionada; // Devuelve la factura seleccionada, si se encontró; de lo contrario, null
+
+
+    */
     }
+
+
+
 
 
     @Override

@@ -60,7 +60,7 @@ public class Main {
            // mostrarMetadatos(dbMetaData);
             mostrarFactura();
             FacturaDAO facturaDAO = new FacturaDAO();
-            insertarFactura(facturaDAO);
+            //insertarFactura(facturaDAO);
             testCRUD();
         } catch (SQLException e) {
             logger.error("Ha ocurrido un error al obtener los metadatos: ", e.fillInStackTrace());
@@ -70,9 +70,9 @@ public class Main {
         FacturaDAO facturaDAO = new FacturaDAO();
         insertarFactura(facturaDAO);
         consultarTodasLasFacturas(facturaDAO);
-
-        /*error por un null*/
         actualizarFactura(facturaDAO);
+        /*error por un null*/
+
         consultarFactura(facturaDAO);
         eliminarFactura(facturaDAO);
     }
@@ -88,11 +88,12 @@ public class Main {
     }
 
     private static void consultarFactura(FacturaDAO facturaDAO) {
-        Factura factura = new Factura(2,"teset2",77777777,122222.0);
+        //Factura factura = new Factura("teset2",77777777,122222.0);
+
         try {
             facturaDAO.obtenerPorId(2);
         }catch (SQLException SQLE){
-            System.out.println("Error en al consultar la factura: " +factura.getCodigo() + " error: " + SQLE );
+            System.out.println("Error en al consultar la factura: " +2 + " error: " + SQLE );
         }
 
 

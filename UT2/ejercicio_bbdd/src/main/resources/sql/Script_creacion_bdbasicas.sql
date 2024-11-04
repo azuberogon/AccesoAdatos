@@ -3,8 +3,8 @@
 							BD Básicas
 *********************************************************************
 ********************************************************************/
-DROP SCHEMA IF EXISTS bdBasicas;
-create database bdBasicas;
+DROP SCHEMA IF EXISTS bdEmpleadosOficinas_Aitor;
+create database bdEmpleadosOficinas_Aitor;
 use bdBasicas;
 
 create table empleados(
