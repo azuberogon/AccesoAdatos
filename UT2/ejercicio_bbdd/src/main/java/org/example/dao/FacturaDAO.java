@@ -106,16 +106,19 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
     }
     @Override
     public Factura obtenerPorId(Integer id) throws SQLException {
+        String sql = "SELECT * FROM Facturas WHERE codigo = ?"; // Consulta SQL para buscar por código
+        Factura facturaSeleccionada = null;
 
-       String sql = "SELECT * from Facturas where codigo = ?";
-       Factura facturaBuscada = null;
-       PreparedStatement pstmt= null;
-       try(Connection connection = MYSQLConnection.getInstancia().getConnection()){
-            pstmt = connection.prepareStatement(sql);
-           pstmt.setInt(1,id);
-            try(ResultSet rs = pstmt.executeQuery()){
-                if(rs.next()){
-                    facturaBuscada = new Factura(
+        try (Connection connection = MYSQLConnection.getInstancia().getConnection();
+             PreparedStatement pstmt = connection.prepareStatement(sql)) {
+
+            // Configura el parámetro de la consulta con el id que buscas
+            pstmt.setInt(1, id);
+
+            // Ejecuta la consulta y obtiene el ResultSet
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) { // Si se encuentra un resultado, crea la factura
+                    facturaSeleccionada = new Factura(
                             rs.getInt("codigo"),
                             rs.getString("destinatario"),
                             rs.getInt("cuenta"),
@@ -124,48 +127,18 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
                     );
                 }
             }
-       } catch (SQLException e) {
-           System.out.println("Error al obtener la factura con el código: " + id + " - Error: " + e);
-           e.printStackTrace();
-       }
-
-        return facturaBuscada;
-
-
-
-
-        /*String sql = "SELECT * FROM Facturas WHERE CODIGO = ?"; // Query de búsqueda en SQL
-        Factura facturaSeleccionada = null;
-
-        // Usa try-with-resources para manejar Connection, PreparedStatement y ResultSet correctamente
-        try (Connection connection = MYSQLConnection.getInstancia().getConnection();
-             PreparedStatement pstmt = connection.prepareStatement(sql)) {
-
-            pstmt.setInt(1, id); // Establece el valor del parámetro antes de ejecutar la consulta
-
-            try (ResultSet rs = pstmt.executeQuery()) { // Ejecuta la consulta después de configurar el parámetro
-                if (rs.next()) {
-                    facturaSeleccionada = new Factura(
-                            rs.getInt("codigo"),
-                            rs.getString("destinatario"),
-                            rs.getInt("cuenta"),
-                            rs.getDouble("importe"),
-                            rs.getTimestamp("fecha_hora").toLocalDateTime() // Usa getTimestamp para obtener fecha y hora directamente
-                    );
-                }
-            }
         } catch (SQLException e) {
-            System.out.println("Error al obtener la factura con el id: " + id + " - Error: " + e);
+            System.out.println("Error al obtener la factura con el código: " + id + " - Error: " + e);
             e.printStackTrace();
         }
 
-        return facturaSeleccionada; // Devuelve la factura seleccionada, si se encontró; de lo contrario, null
+        // Verifica si se encontró la factura; si no, muestra un mensaje de error o advertencia
+        if (facturaSeleccionada == null) {
+            System.out.println("No se encontró ninguna factura con el código: " + id);
+        }
 
-
-    */
+        return facturaSeleccionada; // Devuelve la factura si se encontró; de lo contrario, null
     }
-
-
 
 
 
