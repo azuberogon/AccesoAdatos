@@ -7,25 +7,19 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class MYSQLConnection {
-    // Obtén una instancia del logger
-
-
-    public void conectar() {
-        logger.trace("Intentando conectar a la base de datos...");
-        // Código para conectar a la base de datos...
-        logger.info("Conexión exitosa a la base de datos.");
-    }
+    // Logger para registrar eventos
     private static final Logger logger = LogManager.getLogger(MYSQLConnection.class.getName());
 
-    // La única instancia de la clase
+    // La única instancia de la clase (Singleton)
     private static MYSQLConnection instance;
-    // El objeto Connection
+
+    // Objeto Connection
     private Connection connection;
 
     // Datos de conexión
     private final String PORT = "3306";
     private final String SERVER = "localhost";
-    private static final String DB = "bdEmpleadosOficinas_Aitor"; // Cambiar por tu nombre
+    private static final String DB = "bdEmpleadosOficinas_Aitor";
     private final String DBMS = "mysql";
     private final String URL = "jdbc:" + DBMS + "://" + SERVER + ":" + PORT + "/" + DB;
     private final String USER = "root";
@@ -33,12 +27,16 @@ public class MYSQLConnection {
 
     // Constructor privado para evitar que se creen nuevas instancias
     private MYSQLConnection() {
+        conectar(); // Establece la conexión cuando se crea la instancia
+    }
+
+    // Método para establecer una nueva conexión
+    private void conectar() {
         try {
-            // Intentamos establecer la conexión
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            logger.trace("Conexión establecida con la base de datos '{}'", DB);
+            logger.info("Conexión establecida con la base de datos '{}'", DB);
         } catch (SQLException e) {
-            logger.error("Error al conectar a la base de datos '{}': ", DB, e.fillInStackTrace());
+            logger.error("Error al conectar a la base de datos '{}': ", DB, e);
         }
     }
 
@@ -50,8 +48,17 @@ public class MYSQLConnection {
         return instance;
     }
 
-    // Método para obtener la conexión
+    // Método para obtener la conexión, asegurando que esté abierta
     public Connection getConnection() {
+        try {
+            // Verifica si la conexión es nula o está cerrada
+            if (connection == null || connection.isClosed()) {
+                logger.warn("Conexión cerrada o nula, intentando reconectar...");
+                conectar(); // Intenta restablecer la conexión
+            }
+        } catch (SQLException e) {
+            logger.error("Error al verificar el estado de la conexión: ", e);
+        }
         return connection;
     }
 
@@ -59,5 +66,4 @@ public class MYSQLConnection {
     public static String getDB() {
         return DB;
     }
-
 }

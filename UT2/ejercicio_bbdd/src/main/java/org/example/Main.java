@@ -91,7 +91,7 @@ public class Main {
         //Factura factura = new Factura("teset2",77777777,122222.0);
 
         try {
-            facturaDAO.obtenerPorId(2);
+            System.out.println("factura buscada: " + facturaDAO.obtenerPorId(2));
         }catch (SQLException SQLE){
             System.out.println("Error en al consultar la factura: " +2 + " error: " + SQLE );
         }

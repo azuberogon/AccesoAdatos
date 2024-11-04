@@ -106,24 +106,20 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
     }
     @Override
     public Factura obtenerPorId(Integer id) throws SQLException {
-        String sql = "SELECT * FROM Facturas WHERE codigo = ?"; // Consulta SQL para buscar por código
+        String sql = "SELECT * FROM Facturas WHERE codigo = ?";
         Factura facturaSeleccionada = null;
 
-        try (Connection connection = MYSQLConnection.getInstancia().getConnection();
-             PreparedStatement pstmt = connection.prepareStatement(sql)) {
-
-            // Configura el parámetro de la consulta con el id que buscas
+        try (PreparedStatement pstmt = MYSQLConnection.getInstancia().getConnection().prepareStatement(sql)) {
             pstmt.setInt(1, id);
 
-            // Ejecuta la consulta y obtiene el ResultSet
             try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) { // Si se encuentra un resultado, crea la factura
+                if (rs.next()) {
                     facturaSeleccionada = new Factura(
                             rs.getInt("codigo"),
                             rs.getString("destinatario"),
                             rs.getInt("cuenta"),
                             rs.getDouble("importe"),
-                            rs.getTimestamp("fecha_hora").toLocalDateTime() // Convierte a LocalDateTime
+                            rs.getTimestamp("fecha_hora").toLocalDateTime()
                     );
                 }
             }
@@ -132,13 +128,14 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
             e.printStackTrace();
         }
 
-        // Verifica si se encontró la factura; si no, muestra un mensaje de error o advertencia
         if (facturaSeleccionada == null) {
             System.out.println("No se encontró ninguna factura con el código: " + id);
         }
 
-        return facturaSeleccionada; // Devuelve la factura si se encontró; de lo contrario, null
+        return facturaSeleccionada;
     }
+
+
 
 
 
@@ -160,6 +157,7 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
             // Ejecutar el UPDATE y verificar si se afectó alguna fila
             int filasAfectadas = pstmt.executeUpdate();
             if (filasAfectadas > 0) {
+
                 System.out.println("La factura con código " + entity.getCodigo() + " fue actualizada correctamente.");
             } else {
                 System.out.println("No se encontró ninguna factura con el código " + entity.getCodigo() + ".");
@@ -174,17 +172,20 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
 
     @Override
     public void eliminar(Integer id) throws SQLException {
-        String sql = "DELETE FROM facturas WHERE ID = ?";
+        String sql = "DELETE FROM Facturas WHERE codigo = ?";
 
-        try(Connection conn = MYSQLConnection.getInstancia().getConnection();
-            PreparedStatement pstmt = conn.prepareStatement(sql)){
-            pstmt.setInt(1,id);
-            int filasAfectadas =  pstmt.executeUpdate(); // se observa si alguna fila se modifica;
-            if (filasAfectadas > 0){
-                System.out.println("Factura con el ID: "+id+" fue eliminada correctamente");
-            }else {
+        try (PreparedStatement pstmt = MYSQLConnection.getInstancia().getConnection().prepareStatement(sql)) {
+            pstmt.setInt(1, id);
+            int filasAfectadas = pstmt.executeUpdate();
+            if (filasAfectadas > 0) {
+                System.out.println("Factura con el ID: " + id + " fue eliminada correctamente");
+            } else {
                 System.out.println("No se encontró ninguna factura con el ID: " + id + ".");
             }
+        } catch (SQLException e) {
+            System.out.println("Error al eliminar la factura con el ID: " + id + " - Error: " + e);
+            e.printStackTrace();
         }
     }
+
 }

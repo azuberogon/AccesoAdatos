@@ -70,14 +70,15 @@ public class Factura {
     }
     @Override
     public String toString() {
-        return "Factura {" +
-                "\ncodigo:" + codigo +
-                ",\n destinatario: '" + destinatario + '\'' +
-                ",\n cuenta: " + cuenta +
-                ",\n importe: " + importe+ "€" +
-                ",\n fecha y hora creacion: " + fecha_hora +
-                "\n"+'}'+"\n\n\n";
+        return "\n================= Factura =================" +
+                "\nCódigo:            " + codigo +
+                "\nDestinatario:      " + destinatario +
+                "\nCuenta:            " + cuenta +
+                "\nImporte:           " + importe + " €" +
+                "\nFecha y Hora:      " + fecha_hora +
+                "\n===========================================\n";
     }
+
 
 
 
