@@ -223,9 +223,6 @@ public class Main {
     }
 
     
-    
-
-
     private static void mostrarFactura(){
         FacturaDAO facturaDAO = new FacturaDAO();
         try {
