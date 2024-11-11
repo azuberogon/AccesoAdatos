@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.db.model;
 
 import java.time.LocalDateTime;
 
@@ -6,34 +6,33 @@ public class Factura {
 
 
 
-    private int codigo;
+
+    private Integer codigo;
     private String destinatario;
-    private int cuenta;
-    private double importe ;
+    private Integer cuenta;
+    private Double importe ;
     private LocalDateTime fecha_hora;
 
 
-    public Factura(int codigo, String destinatario, int cuenta, double importe, LocalDateTime fecha_hora) {
+    public Factura(Integer codigo, String destinatario, Integer cuenta, Double importe, LocalDateTime fecha_hora) {
         this.codigo = codigo;
         this.destinatario = destinatario;
         this.cuenta = cuenta;
         this.importe = importe;
         this.fecha_hora = fecha_hora;
     }
-    public Factura(int codigo, String destinatario, int cuenta, double importe ) {
+    public Factura(Integer codigo, String destinatario, Integer cuenta, Double importe ) {
         this.codigo = codigo;
         this.destinatario = destinatario;
         this.cuenta = cuenta;
         this.importe = importe;
 
     }
-
-
-    public int getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
 
@@ -45,19 +44,19 @@ public class Factura {
         this.destinatario = destinatario;
     }
 
-    public int getCuenta() {
+    public Integer getCuenta() {
         return cuenta;
     }
 
-    public void setCuenta(int cuenta) {
+    public void setCuenta(Integer cuenta) {
         this.cuenta = cuenta;
     }
 
-    public double getImporte() {
+    public Double getImporte() {
         return importe;
     }
 
-    public void setImporte(double importe) {
+    public void setImporte(Double importe) {
         this.importe = importe;
     }
 

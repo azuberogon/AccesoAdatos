@@ -1,6 +1,7 @@
 package org.example;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
@@ -10,9 +11,9 @@ import java.util.Scanner;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.conection.MYSQLConnection;
-import org.example.dao.FacturaDAO;
-import org.example.model.Factura;
+import org.example.db.conection.MYSQLConnection;
+import org.example.db.dao.FacturaDAO;
+import org.example.db.model.Factura;
 
 
 public class Main {
@@ -23,7 +24,7 @@ public class Main {
         System.out.println("------- UT2_A3 - Metadatos en BDR -------");
         System.out.println("-----------------------------------------");
 
-       /* Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("¿Quieres crear la tabla de Facturas?");
         System.out.println("(1=Sí)");
         System.out.println("(Cualquier otra cosa = No)");
@@ -47,7 +48,7 @@ public class Main {
         respuesta = sc.nextLine();
         if (respuesta.equals("1")) {
             testCRUD();
-        }*/
+        }
 
         
 
@@ -157,26 +158,51 @@ public class Main {
 
     private static void ejecutarSQL(String fichero) throws IOException, SQLException {
         String contenidoFicheroSQL = leerFicheroSQL(fichero);
-
         Connection connection = MYSQLConnection.getInstancia().getConnection();
+
+        // Verificar si la conexión es válida
         if (connection != null) {
-            // Ejecutar todas las consultas en un único executeUpdate()
+            try (Statement stmt = connection.createStatement()) {
+                // Dividir el contenido en sentencias separadas por puntos y coma (;)
+                String[] sentencias = contenidoFicheroSQL.split(";");
+
+                // Ejecutar cada sentencia por separado
+                for (String sentencia : sentencias) {
+                    // Ejecutar solo si la sentencia no está vacía
+                    if (!sentencia.trim().isEmpty()) {
+                        stmt.executeUpdate(sentencia);
+                    }
+                }
+            }
         }
     }
 
-    private static String leerFicheroSQL(String sqlFilePath) throws IOException {
+
+
+    public static String leerFicheroSQL(String sqlFilePath) throws IOException {
+        File archivoSQL = new File(sqlFilePath);
+
+        // Verificar si el archivo existe
+        if (!archivoSQL.exists()) {
+            throw new IOException("El archivo SQL no existe en la ruta especificada: " + sqlFilePath);
+        }
+
         // Leer el archivo SQL y construir el script en un StringBuilder
         StringBuilder script = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new FileReader(sqlFilePath))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoSQL))) {
             String line;
             while ((line = br.readLine()) != null) {
                 // Añadir cada línea al script con el separador
-                // de línea del sistema (independiente de Windows o Linux)
                 script.append(line).append(System.lineSeparator());
             }
+        } catch (IOException e) {
+            // Excepción si ocurre un problema al leer el archivo
+            throw new IOException("Error al leer el archivo SQL: " + e.getMessage(), e);
         }
+
         return script.toString();
     }
+
 
     // Función encargada de mostrar metadatos
     private static void mostrarMetadatos(DatabaseMetaData dbMetaData) throws SQLException {

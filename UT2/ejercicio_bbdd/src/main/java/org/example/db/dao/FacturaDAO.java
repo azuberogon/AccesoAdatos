@@ -1,7 +1,9 @@
-package org.example.dao;
+package org.example.db.dao;
 
-import org.example.conection.MYSQLConnection;
-import org.example.model.Factura;
+
+
+import org.example.db.conection.MYSQLConnection;
+import org.example.db.model.Factura;
 
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -27,7 +29,7 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
         }
     }*/
    @Override
-   public void insertar(Factura entity) throws SQLException {
+   public int insertar(Factura entity) throws SQLException {
        String sql = "INSERT INTO Facturas (codigo, cuenta, destinatario, fecha_hora, importe) VALUES (?, ?, ?, ?, ?)";
        Connection connection = MYSQLConnection.getInstancia().getConnection();
 
@@ -45,6 +47,7 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
                System.out.println("No se pudo insertar la factura.");
            }
        }
+       return 1; // cambiar en pasos futuros
        // Nota: no se cierra la conexión aquí
    }
 
@@ -140,7 +143,7 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
 
 
     @Override
-    public void actualizar(Factura entity) throws SQLException {
+    public int actualizar(Factura entity) throws SQLException {
         String sql = "UPDATE facturas SET destinatario = ?, cuenta = ?, importe = ?, fecha_hora = ? WHERE codigo = ?";
 
         try (Connection con = MYSQLConnection.getInstancia().getConnection();
@@ -166,12 +169,13 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
             System.out.println("Error en la conexión a la base de datos: " + SQLE);
 
         }
+        return 1;
     }
 
 
 
     @Override
-    public void eliminar(Integer id) throws SQLException {
+    public int eliminar(Integer id) throws SQLException {
         String sql = "DELETE FROM Facturas WHERE codigo = ?";
 
         try (PreparedStatement pstmt = MYSQLConnection.getInstancia().getConnection().prepareStatement(sql)) {
@@ -186,6 +190,7 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
             System.out.println("Error al eliminar la factura con el ID: " + id + " - Error: " + e);
             e.printStackTrace();
         }
+        return 1 ;
     }
 
 }
