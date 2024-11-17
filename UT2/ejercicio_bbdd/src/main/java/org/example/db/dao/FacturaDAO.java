@@ -193,4 +193,27 @@ public class FacturaDAO implements GenericDAO<Factura, Integer> {
         return 1 ;
     }
 
+    public List<Factura> buscarPorDestinatario(String destinatario) throws SQLException {
+        List<Factura> facturas = new ArrayList<>();
+        String sql = "SELECT * FROM Facturas WHERE destinatario = ?";
+
+        try (Connection conn = MYSQLConnection.getInstancia().getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, destinatario);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Factura factura = new Factura(
+                        rs.getInt("codigo"),
+                        rs.getString("destinatario"),
+                        rs.getInt("cuenta"),
+                        rs.getDouble("importe"),
+                        rs.getTimestamp("fecha_hora").toLocalDateTime()
+                );
+                facturas.add(factura);
+            }
+        }
+        return facturas;
+    }
+
 }

@@ -1,0 +1,71 @@
+
+
+
+import static org.example.constansts.FacturaConstants.*;
+/*
+
+public class FacturaService extends GenericServiceImpl<Factura, Integer> {
+
+    // Crea una instancia del Logger
+    private static final Logger logger = LogManager.getLogger(FacturaService.class);
+
+    public FacturaService() {
+        super(new FacturaDAO());
+    }
+    @Override
+    public int insertar(Factura factura) {
+        int comprobarFactura = comprobarFactura(factura);
+        if (comprobarFactura != 0) {
+            return comprobarFactura;
+        }
+        return super.insertar(factura);
+    }
+
+    @Override
+    public Factura obtenerPorId(Integer id) {
+        if (id == null) {
+            logger.error("No se puede buscar con valores nulos");
+            return null;
+        }
+        return super.obtenerPorId(id);
+    }
+    private int comprobarFactura(Factura factura) {
+        // Validate that the `factura` object is not null
+        if (factura == null) {
+            logger.error("No se pueden insertar valores nulos");
+            return GenericConstants.ERROR_PARAM_NULL;
+        }
+
+        // Validate `codigo`
+        if (factura.getCodigo() == null) {
+            logger.error("No se admite un código nulo");
+            return ERROR_CODIGO_NULO;
+        }
+
+        // Validate `destinatario`
+        if (factura.getDestinatario() == null || factura.getDestinatario().isEmpty() || factura.getDestinatario().isBlank()) {
+            logger.error("El destinatario no puede estar vacío o ser nulo");
+            return ERROR_DESTINATARIO_NULO;
+        } else if (factura.getDestinatario().length() > TABLE_DESTINATARIO_MAX_LONG) {
+            factura.setDestinatario(GenericUtils.limitarString(factura.getDestinatario(), TABLE_DESTINATARIO_MAX_LONG));
+        }
+
+        // Validate `cuenta`
+        // Validate `cuenta`
+        if (factura.getCuenta() == null) {
+            logger.error("La cuenta no puede ser nula");
+            return ERROR_CUENTA_NULO;
+        }
+
+        // Validate `importe` (assuming integer and decimal validation is required)
+        if (factura.getImporte() == null) {
+            logger.error("El importe no puede ser nulo");
+            return ERROR_IMPORTE_NULO;
+        } else if (!GenericUtils.esValidoParaDecimal(factura.getImporte(), ERROR_IMPORTE_DEMASIADO_GRANDE)) {
+            logger.error("El importe supera el límite permitido de dígitos enteros");
+            return ERROR_IMPORTE_DEMASIADO_GRANDE ;
+        }
+
+        return 0; // Success
+    }
+*/
