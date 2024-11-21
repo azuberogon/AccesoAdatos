@@ -5,89 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0045c60c-60ee-42e6-a64e-1ad175e74bd1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../PracticasExamenBaseDatos/ExamenBaseDatos/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticasExamenBaseDatos/ExamenBaseDatos/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticasExamenBaseDatos/ExamenBaseDatos/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticasExamenBaseDatos/ExamenBaseDatos/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticasExamenBaseDatos/ExamenBaseDatos/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticasExamenBaseDatos/ExamenBaseDatos/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticasExamenBaseDatos/ExamenBaseDatos/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PracticasExamenBaseDatos/ExamenBaseDatos/src/main/java/org/example/db/conection/MYSQLConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A4_MetaInformacion/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A4_MetaInformacion/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A4_MetaInformacion/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A4_MetaInformacion/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A4_MetaInformacion/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A4_MetaInformacion/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A4_MetaInformacion/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A4_MetaInformacion/src/main/java/es/mariana/ut2/a4/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A4_MetaInformacion/src/main/java/es/mariana/ut2/a4/db/connection/MYSQLConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/src/main/java/db/connection/MySQLConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/src/main/java/db/dao/FacturaDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/src/main/java/db/dao/GenericDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/src/main/java/db/model/Factura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/src/main/resources/log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/src/main/resources/sql/facturas.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/target/classes/log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A5_CRUD_Basico/target/classes/sql/facturas.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/java/constants/FacturaConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/java/constants/GenericConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/java/db/connection/MySQLConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/java/db/dao/FacturaDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/java/db/dao/GenericDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/java/db/model/Factura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/java/db/service/FacturaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/java/db/service/GenericService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/java/db/service/GenericServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/java/utils/GenericUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/resources/log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/src/main/resources/sql/facturas.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/target/classes/log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/target/classes/sql/facturas.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/java/constants/FacturaConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/java/constants/GenericConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/java/db/connection/MySQLConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/java/db/dao/FacturaDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/java/db/dao/GenericDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/java/db/model/Factura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/java/db/service/FacturaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/java/db/service/GenericService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/java/db/service/GenericServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/java/utils/GenericUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/resources/log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/src/main/resources/sql/facturas.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/target/classes/log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A7_App_completa/target/classes/sql/facturas.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nueva carpeta/factura service .txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/db/dao/FacturaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/db/dao/FacturaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/db/service/FacturaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/db/service/FacturaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticasExamenBaseDatos/ExamenBaseDatos/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticasExamenBaseDatos/ExamenBaseDatos/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PracticasExamenBaseDatos/ExamenBaseDatos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PracticasExamenBaseDatos/ExamenBaseDatos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apuntesEneko/UT2_A6_Capa_Servicio/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +45,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/chuna/docuemtnos 2/acceso a datos/AccesoAdatos/AccesoAdatos/UT2/apuntesEneko/UT2_A6_Capa_Servicio",
+    "last_opened_file_path": "C:/Users/chuna/docuemtnos 2/acceso a datos/AccesoAdatos/AccesoAdatos/UT 2/PracticasExamenBaseDatos/ExamenBaseDatos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -191,6 +111,7 @@
       <workItem from="1731599833560" duration="1673000" />
       <workItem from="1731858916498" duration="1749000" />
       <workItem from="1731861668729" duration="107000" />
+      <workItem from="1732100641126" duration="42000" />
     </task>
     <servers />
   </component>

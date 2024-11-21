@@ -14,8 +14,8 @@ public class MySQLConnection {//MYSQLConnection
     //conexion a la base de datos estructura {SERVER, PORT, DB, DBMS, URL, USER, PASSWORD}
     private Connection connection;
     private final String SEVER = "localhost";//servidor se puede sustituir por una ip para conectarse
-    private final String PORT = "3309";// puerto en el que se encuentra la base de datos
-    private static final String DB = "bdbasicas";
+    private final String PORT = "3306";// puerto en el que se encuentra la base de datos
+    private static final String DB = "bdempleadosoficinas_Aitor";
     private final String DBMS = "mysql";// base de datos
     private final String URL = "jdbc:" +DBMS +"://"+SEVER+ ":" +PORT+"/"+DB+"?allowMultiQueries=true";// base de datos
     private final String USER = "root";
