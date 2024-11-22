@@ -79,7 +79,7 @@ public class FacturaDao implements GenericDao<Factura,Integer> {
         ResultSet RSFactura = pstmt.executeQuery();
         while (RSFactura.next()){
 
-            Factura factura = new Factura(RSFactura.getInt("codigo"),
+            Factura factura = new Factura(RSFactura.getInt(1),
                     RSFactura.getString("destinatario"),
                     RSFactura.getInt("cuenta"),
                     RSFactura.getDouble("importe"),

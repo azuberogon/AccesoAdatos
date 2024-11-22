@@ -5,10 +5,13 @@ import org.apache.logging.log4j.LogManager;
 
 import org.apache.logging.log4j.Logger;
 import org.example.constants.GenericConstants;
+import org.example.db.conection.MySQLConnection;
 import org.example.db.dao.FacturaDao;
 import org.example.db.model.Factura;
 import org.example.utils.GenericUtils;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 
 import static org.example.constants.FacturaConstants.*;
@@ -20,7 +23,7 @@ public class FacturaService extends GenericServiceImpl<Factura,Integer>{
         super(new FacturaDao());
     }
     //mirar clase pero no se
-    
+
     private  int comprobarFacturas(Factura factura){
         if (factura == null){
             logger.error("No se puede insertar valores nulos");
@@ -63,4 +66,40 @@ public class FacturaService extends GenericServiceImpl<Factura,Integer>{
         return 0;
     }
 
+    @Override
+    public int insertar(Factura entity) {
+        int comprobarFactura = comprobarFacturas(entity);
+        Connection con = MySQLConnection.getInstance().getConnection();
+        if (comprobarFactura != 0 ){
+            return comprobarFactura;
+
+        }
+        int resultado=-1;
+        try {
+            con.setAutoCommit(false);
+
+            resultado = super.insertar(entity);
+            con.commit();
+
+
+        }catch (SQLException SQLE){
+            System.out.println("error al aconectar con la base de datos");
+
+            try {
+                con.rollback();
+            }catch (SQLException SQLex){
+                System.out.println("ERror al hacer un rolback" +SQLex.fillInStackTrace());
+
+            }
+        }finally {
+            try{
+                con.setAutoCommit(true);
+            }catch (SQLException sqlException){
+                System.out.println("erro en el el auto commit");
+            }
+
+        }
+
+        return super.insertar(entity);
+    }
 }
