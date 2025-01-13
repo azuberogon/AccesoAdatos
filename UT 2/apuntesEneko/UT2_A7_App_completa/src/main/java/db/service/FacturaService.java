@@ -69,7 +69,7 @@ public class FacturaService extends GenericServiceImpl<Factura, Integer> {
         try {
             connection.setAutoCommit(false);
             logger.info("Auto commit desactivado.");
-
+                        //dao
             factura = super.obtenerPorId(id);
             connection.commit();
             logger.info("Factura obtenida correctamente");

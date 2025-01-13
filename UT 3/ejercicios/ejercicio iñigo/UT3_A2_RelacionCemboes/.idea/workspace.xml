@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c2fd0f1-a719-4ccf-8943-4a84d6a2b4fc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../UT3_REL_1_1/UT3_REL_1_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../UT3_REL_1_N/.idea/UT3_REL_1_N.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../UT3_REL_1_N/UT3_REL_1_N.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../practicas/PracticasHibernate/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../practicas/PracticasHibernate/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../practicas/PracticasHibernate/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../practicas/PracticasHibernate/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../practicas/PracticasHibernate/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../practicas/PracticasHibernate/src/main/java/org/example/model/ClienteEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../practicas/PracticasHibernate/src/main/java/org/example/model/ComercialEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../practicas/PracticasHibernate/src/main/java/org/example/model/PedidoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../practicas/PracticasHibernate/src/main/resources/ClienteEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../practicas/PracticasHibernate/src/main/resources/ComercialEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../practicas/PracticasHibernate/src/main/resources/PedidoEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../practicas/PracticasHibernate/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/UT3_A1_CRUD.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/connection/HibernateUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/constants/GenericConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/dao/ClienteDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/dao/ComercialDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/dao/GenericDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/dao/GenericDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/dao/PedidoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/model/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/model/Comercial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/model/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/org/example/connection/HibernateUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/org/example/entity/ClienteEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/org/example/entity/ComercialEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/org/example/entity/PedidoEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/org/example/model/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/org/example/model/Comercial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/org/example/model/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/service/ClienteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/service/ComercialService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/service/GenericService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/service/GenericServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/java/service/PedidoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/resources/log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/resources/mappings/ClienteEntity.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/resources/mappings/ComercialEntity.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/resources/mappings/PedidoEntity.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/src/main/resources/sql/UT3-1.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/target/classes/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/target/classes/mappings/ClienteEntity.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/target/classes/mappings/ComercialEntity.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/target/classes/mappings/PedidoEntity.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUD/target/classes/sql/UT3-1.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/connection/HibernateUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/constants/GenericConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/dao/ClienteDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/dao/ComercialDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/dao/GenericDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/dao/GenericDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/dao/PedidoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/model/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/model/Comercial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/model/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/service/ClienteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/service/ComercialService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/service/GenericService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/service/GenericServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/java/service/PedidoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/resources/log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../UT3_A1_CRUDCorreccion/src/main/resources/sqlTablas.sql" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2ohMfSjRDVSrJ7JzPmjIWYpuDxC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/17j4j/Desktop/ACDA/Actividades/UT3/Soluciones/UT3_A1/UT3_A1_CRUD/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/chuna/docuemtnos 2/acceso a datos/AccesoAdatos/AccesoAdatos/UT 3/ejercicios/ejercicio iñigo/UT3_A2_RelacionCemboes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="UT3_A2_Relaciones" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="UT3_A2_RelacionCemboes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="UT3_A2_RelacionCemboes" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c2fd0f1-a719-4ccf-8943-4a84d6a2b4fc" name="Changes" comment="" />
+      <created>1731317456662</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731317456662</updated>
+      <workItem from="1736198362356" duration="3887000" />
+      <workItem from="1736202311915" duration="2396000" />
+      <workItem from="1736204730684" duration="717000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.AnnotationException" package="org.hibernate" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/main/java/model/Pedido.java" line="26">
+        <watch expression="((Pedido)this).cliente" language="JAVA" custom="model.Pedido" />
+      </inline-watch>
+    </watches-manager>
+  </component>
+</project>
