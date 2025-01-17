@@ -2,6 +2,7 @@ package model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -55,6 +56,11 @@ public class Pedido {
     public void setComercial(Comercial comercial) {
         this.comercial = comercial;
     }
+    /*public List<Producto> getPedidos(){
+        List<Pedido> producto = new ArrayList<Pedido>();
+
+
+    }*/
 
     //TODO cuidado con modificar el metodo para que imprima cliente y comercial
     // ya que podríamos caer en un bucle si lo hacemos en el resto de clases
