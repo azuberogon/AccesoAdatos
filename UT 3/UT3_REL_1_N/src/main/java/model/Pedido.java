@@ -18,7 +18,7 @@ public class Pedido {
     // Relación Muchos a Uno con Cliente
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "clienteID", nullable = false)
-    private Cliente cliente;
+    private Cliente cliente; // aqui se le añade al pedido un cliente en este punto el cliente tiene el pedido
 
     public Cliente getCliente() {
         return cliente;

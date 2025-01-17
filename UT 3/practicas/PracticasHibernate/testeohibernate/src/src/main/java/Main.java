@@ -1,17 +1,14 @@
-package org.example;
 
+import model.Cliente;
+import model.Comercial;
+import model.Pedido;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.Service.ClienteService;
-import org.example.Service.ComercialService;
-import org.example.Service.PedidoServicie;
-import org.example.entity.ClienteEntity;
-import org.example.entity.ComercialEntity;
-import org.example.entity.PedidoEntity;
+import service.ClienteService;
+import service.ComercialService;
+import service.PedidoService;
 
-
-import java.sql.Date;
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -32,7 +29,7 @@ public class Main {
     private static void opcionesUsuario() {
         String opcion = "0";
 
-        while (!opcion.equals("5")) {
+        while (!opcion.equals("4")) {
             opcion = mostrarMenu();
             switch (opcion) {
                 case "1":
@@ -45,10 +42,7 @@ public class Main {
                     testPedido();
                     break;
                 case "4":
-                    testPedido();
-                    break;
-                case "5":
-                    testRelacionClientePedido();
+                    System.out.println("Esperamos que la experiencia haya sido de su agrado. ¡Adios!");
                     break;
                 default:
                     System.out.println("Opción no valida. Prueba otra vez...");
@@ -68,14 +62,13 @@ public class Main {
                 \t1 - Comprobar Cliente
                 \t2 - Comprobar Comercial
                 \t3 - Comprobar Pedido
-                \t4 - Comprobar RElacion
-                \t5 - Salir""");
+                \t4 - Salir""");
         return sc.nextLine();
     }
 
     public static void testCliente(){
         ClienteService clienteService = new ClienteService();
-        ClienteEntity cliente = new ClienteEntity();
+        Cliente cliente = new Cliente();
         cliente.setNombre("Eneko");
         cliente.setApellido1("No sabe");
         cliente.setApellido2("Nada");
@@ -93,10 +86,10 @@ public class Main {
         clienteService.update(cliente);
         System.out.println("Cliente DESPUÉS de update:\n" + cliente);
 
-        ClienteEntity cliente2 = clienteService.findById(cliente.getClienteId());
+        Cliente cliente2 = clienteService.findById(cliente.getClienteID());
         System.out.println("Cliente2 DESPUÉS de findById:\n" + cliente2);
 
-        List<ClienteEntity> clientes = clienteService.findAll();
+        List<Cliente> clientes = clienteService.findAll();
         System.out.println("TODOS LOS CLIENTES PERSISTIDOS:");
         clientes.forEach(System.out::println);
         clienteService.delete(cliente);
@@ -104,37 +97,37 @@ public class Main {
 
     public static void testComercial(){
         ComercialService comercialService = new ComercialService();
-        ComercialEntity comercial = new ComercialEntity();
+        Comercial comercial = new Comercial();
         comercial.setNombre("Eneko");
         comercial.setApellido1("No sabe");
         comercial.setApellido2("Nada");
-        comercial.setComision(Double.valueOf(200));
+        comercial.setComision(Float.valueOf(200));
         System.out.println("Comercial ANTES de create:\n" + comercial);
 
         comercialService.create(comercial);
         System.out.println("Comercial DESPUÉS de create:\n" + comercial);
 
         comercial.setNombre("Emilio");
-        comercial.setComision(Double.valueOf(0));
+        comercial.setComision(Float.valueOf(0));
         System.out.println("Comercial ANTES de update:\n" + comercial);
 
         comercialService.update(comercial);
         System.out.println("Comercial DESPUÉS de update:\n" + comercial);
 
-        ComercialEntity comercial2 = comercialService.findById(comercial.getComercialId());
+        Comercial comercial2 = comercialService.findById(comercial.getComercialID());
         System.out.println("Comercial2 DESPUÉS de findById:\n" + comercial2);
 
-        List<ComercialEntity> comerciales = comercialService.findAll();
+        List<Comercial> comerciales = comercialService.findAll();
         System.out.println("TODOS LOS COMERCIALES PERSISTIDOS:");
         comerciales.forEach(System.out::println);
         comercialService.delete(comercial);
     }
 
     public static void testPedido(){
-        PedidoServicie pedidoService = new PedidoServicie();
-        PedidoEntity pedido = new PedidoEntity();
+        PedidoService pedidoService = new PedidoService();
+        Pedido pedido = new Pedido();
         pedido.setTotal(Double.valueOf(150));
-        pedido.setFecha(Date.valueOf(LocalDate.now()));
+        pedido.setFecha(new Date());
         System.out.println("Pedido ANTES de create:\n" + pedido);
 
         pedidoService.create(pedido);
@@ -146,37 +139,13 @@ public class Main {
         pedidoService.update(pedido);
         System.out.println("Pedido DESPUÉS de update:\n" + pedido);
 
-        PedidoEntity pedido2 = pedidoService.findById(pedido.getPedidoId());
+        Pedido pedido2 = pedidoService.findById(pedido.getpedidoID());
         System.out.println("Pedido2 DESPUÉS de findById:\n" + pedido2);
 
-        List<PedidoEntity> pedidos = pedidoService.findAll();
+        List<Pedido> pedidos = pedidoService.findAll();
         System.out.println("TODOS LOS PEDIDOS PERSISTIDOS:");
         pedidos.forEach(System.out::println);
         pedidoService.delete(pedido);
-    }
-
-    public static void testRelacionClientePedido(){
-        System.out.println("creando cliente");
-        ClienteEntity cliente = new ClienteEntity();
-        cliente.setNombre("Aitor");
-        cliente.setApellido1("Zuebro");
-        cliente.setApellido2("González");
-
-
-        System.out.println("Creando pedido e inicializandolo");
-
-        PedidoEntity pedido = new PedidoEntity();
-        pedido.setFecha(Date.valueOf(LocalDate.now()));
-        pedido.setCliente(cliente);
-
-
-        System.out.println("se intenta incializar el pedido");
-        cliente.getPedidos().add(pedido);
-        ClienteService clienteService = new ClienteService();
-        clienteService.create(cliente);
-        System.out.println("el pedido se ha guardado en la tabla");
-
-
     }
 
 }
