@@ -1,0 +1,11 @@
+[19:21, 13/1/2025] aitor: crear un metodo de findwithPedidos en donddonde tendremos que cambiar la busqueda de pedidos
+[19:24, 13/1/2025] aitor: buacar por algun campo que tenaga
+[19:24, 13/1/2025] aitor: buscar por id, buscar por alguna caracteristiaca
+
+
+
+- crear un método de búsqueda, 
+- buscar por algún campo 
+- mirar la clase service y su implementación 
+- alguna etiqueta de la tabla 
+- consulta 
