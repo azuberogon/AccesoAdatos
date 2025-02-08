@@ -16,10 +16,12 @@ public class Producto {
     private String nombre;
     @Column(name = "precio", nullable = false)
     private Double precio;
-    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Contiene> contenido = new ArrayList<>();
+    @OneToMany(mappedBy = "Producto", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Contiene> contenidoEn = new ArrayList<>();
     public Producto()
-    {}
+    {
+
+    }
 
     public Long getProductoID() {
         return productoID;
