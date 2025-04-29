@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Todos las personas del servidor</h1>
+    <table class="table">
+        <thead>
+            <th scope="col">Nif</th>
+            <th scope="col">N seguridad social</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Año nacimiento</th>
+            <th scope="col">Fecha de alta</th>
+            <th scope="col">Salario</th>
+            <th scope="col">Puesto</th>
+            <th scope="col">Fecha de baja</th>
+            <th scope="col">Sede trabaja</th>
+            <th>Eliminar</th>
+            <th>Editar</th>
+        </table>
+    </thead>
+
+<tbody>
+<tr th:each="cliente: ${clientes}">
+    <th scope="row" th:text="${cliente.nss}"/>
+    <th th:text="${cliente.nss}"/>
+    <th th:text="${cliente.nombre}"/>
+    <th th:text="${cliente.apellido}"/>
+    <th th:text="${cliente.anyoNacimiento}"/>
+    <th th:text="${cliente.fechaAlta}"/>
+    <th th:text="${cliente.salario}"/>
+    <th th:text="${cliente.puesto}"/>
+    <th th:text="${cliente.fecha_baja}"/>
+    <th th:text="${cliente.sede_trabaja}"/>
+    <td><a th:href="|/clientes/delet?nss=${cliente.nss}|">eliminar</a></td>
+</tr>
+</tbody>
+</body>
+</html>
