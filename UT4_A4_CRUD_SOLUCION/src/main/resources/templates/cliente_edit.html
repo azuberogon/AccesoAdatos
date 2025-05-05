@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ACDA</title>
+</head>
+<body>
+    <h1>Formulario para editar un cliente</h1>
+
+    <form action="#" th:action="@{/clientes/edit}" th:object="${cliente}" method="post">
+        <p th:text="'Id: ' + *{id}"></p>
+<!-- Incluimos el ID como un imput oculto que no se puede editar, pero se remitirá como parte del cliente -->
+        <input type="hidden" th:field="*{id}"/>
+<!-- Esto es similar al de crear uno nuevo, veremos más adelante cómo se puede hacer ambas cosas en un solo template -->
+        <p>Nombre: <input type="text" th:field="*{nombre}" /></p>
+        <p>Apellido 1: <input type="text" th:field="*{apellido1}" /></p>
+        <p>Apellido 2: <input type="text" th:field="*{apellido2}" /></p>
+        <p>Ciudad: <input type="text" th:field="*{ciudad}" /></p>
+        <p>Categoría: <input type="number" th:field="*{categoria}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>

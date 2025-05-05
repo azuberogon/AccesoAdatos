@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> formulario para añadir personas</h1>
+    <form action="#" th:action="@{/persona/add}" th:object={persona}">
+        <p>nss: <input disabled="true" type="text" th:field="*{nombre}"></p>
+        <p>nss: <input disabled="true" type="text" th:field="*{apellido}"></p>
+        <p>nss: <input disabled="true" type="date" th:field="*{anyoNacimiento}"></p>
+
+
+
+
+  </form>
+</body>
+</html>

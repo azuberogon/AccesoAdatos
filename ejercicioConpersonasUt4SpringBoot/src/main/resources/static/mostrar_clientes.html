@@ -23,18 +23,18 @@
     </thead>
 
 <tbody>
-<tr th:each="cliente: ${clientes}">
-    <th scope="row" th:text="${cliente.nss}"/>
-    <th th:text="${cliente.nss}"/>
-    <th th:text="${cliente.nombre}"/>
-    <th th:text="${cliente.apellido}"/>
-    <th th:text="${cliente.anyoNacimiento}"/>
-    <th th:text="${cliente.fechaAlta}"/>
-    <th th:text="${cliente.salario}"/>
-    <th th:text="${cliente.puesto}"/>
-    <th th:text="${cliente.fecha_baja}"/>
-    <th th:text="${cliente.sede_trabaja}"/>
-    <td><a th:href="|/clientes/delet?nss=${cliente.nss}|">eliminar</a></td>
+<tr th:each="persona: ${personas}">
+    <th scope="row" th:text="${persona.nss}"/>
+    <th th:text="${persona.nss}"/>
+    <th th:text="${persona.nombre}"/>
+    <th th:text="${persona.apellido}"/>
+    <th th:text="${persona.fechaAlta}"/>
+    <th th:text="${persona.anyoNacimiento}"/>
+    <th th:text="${persona.salario}"/>
+    <th th:text="${persona.puesto}"/>
+    <th th:text="${persona.fecha_baja}"/>
+    <th th:text="${persona.sede_trabaja}"/>
+    <td><a th:href="|/persona/delet?nss=${cliente.nss}|">eliminar</a></td>
 </tr>
 </tbody>
 </body>
