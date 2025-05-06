@@ -31,26 +31,27 @@ public class UserController {
     @PostMapping(path="/add")
     public String addNewUser(@ModelAttribute Persona persona, Model model){
 
-        Persona per = new Persona();
-        per.setNif(persona.getNif());
-        per.setNss(persona.getNss());
-        per.setApellido(persona.getApellido());
-        per.setAnyoNacimiento(persona.getAnyoNacimiento());
-        per.setFechaAlta(persona.getFechaAlta());
+//        Persona per = new Persona();
+//        per.setNif(persona.getNif());
+//        per.setNss(persona.getNss());
+//        per.setApellido(persona.getApellido());
+//        per.setAnyoNacimiento(persona.getAnyoNacimiento());
+//        per.setFechaAlta(persona.getFechaAlta());
+        personaService.save(persona);
         return "redirect:/crud/all";//como se lla
     }
     @GetMapping(path="/add")
     public String addNewUser(Model model){
        Persona per = new Persona();
        model.addAttribute("persona",per);
-       return "addPersona";//carga la plantilla perosna el nombre de
+       return "add";//carga la plantilla perosna el nombre de
         //return findALll; te te ejecutaria el metodo princial
     }//plantilla es una plantilla pero va
     @GetMapping(path="/all")
     public String findAll(Model model){
         List<Persona> personaList = personaService.listarPersona();
         model.addAttribute("Personas",personaList);
-        return "addPersona";
+        return "add";
     }
 //    @PutMapping(path="/edit")
 //    public String editPersona(@ModelAttribute Persona persona,Model model){

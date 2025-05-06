@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<h1> formulario para añadir personas</h1>
+<form action="#" th:action="@{/crud/add}" th:object="${persona}" method="post">
+    <p>nif: <input  type="text" th:field="*{nif}"></p>
+    <p>nss: <input  type="text" th:field="*{nss}"></p>
+    <p>nombre: <input  type="text" th:field="*{nombre}"></p>
+    <p>apellido: <input  type="text" th:field="*{apellido}"></p>
+    <p>año de nacimiento: <input  type="Integer" th:field="*{anyoNacimiento}"></p>
+    <p>fecha alta: <input  type="date" th:field="*{fechaAlta}"></p>
+    <p>salario: <input  type="number" th:field="*{salario}"></p>
+    <p>fecha_baja: <input  type="date" th:field="*{fecha_baja}"></p>
+    <p>sede_trabaja: <input  type="text" th:field="*{sede_trabaja}"></p>
+
+    <input >
+
+
+</form>
+</body>
+</html>
+

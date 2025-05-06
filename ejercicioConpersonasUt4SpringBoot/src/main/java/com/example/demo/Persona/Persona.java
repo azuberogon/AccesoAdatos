@@ -24,7 +24,7 @@ public class Persona {
     @Column(length = 50)
     private String apellido ;
     @Column(name= "año_Nacimiento")
-    private LocalDate anyoNacimiento ;
+    private Integer anyoNacimiento ;
 
     private LocalDate fechaAlta;
     private Integer salario;
@@ -68,11 +68,11 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public LocalDate getAnyoNacimiento() {
+    public Integer getAnyoNacimiento() {
         return anyoNacimiento;
     }
 
-    public void setAnyoNacimiento(LocalDate anyoNacimiento) {
+    public void setAnyoNacimiento(Integer anyoNacimiento) {
         this.anyoNacimiento = anyoNacimiento;
     }
 
