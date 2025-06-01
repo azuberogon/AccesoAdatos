@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<form action="/crud/add" method="post" th:object="${persona}">
+    <input type="text" th:field="*{nif}" placeholder="NIF"/><br/>
+    <input type="text" th:field="*{nss}" placeholder="NSS"/><br/>
+    <input type="text" th:field="*{nombre}" placeholder="Nombre"/><br/>
+    <input type="text" th:field="*{apellido}" placeholder="Apellido"/><br/>
+    <input type="text" th:field="*{anoNaz}" placeholder="Año Nacimiento"/><br/>
+    <input type="number" th:field="*{salario}" placeholder="Salario"/><br/>
+    <input type="text" th:field="*{puesto}" placeholder="Puesto"/><br/>
+    <input type="date" th:field="*{fechaAlata}" placeholder="Fecha Alta"/><br/>
+    <input type="date" th:field="*{fechaBaja}" placeholder="Fecha Baja"/><br/>
+    <input type="text" th:field="*{sedeTrabaja}" placeholder="Sede"/><br/>
+    <button type="submit">Guardar</button>
+</form>
+</body>
+</html>
