@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="87afc606-43be-48d2-ad28-f496da038fc5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/src/main/java/AccesoDatos/ut4/spring_boot/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/src/main/java/AccesoDatos/ut4/spring_boot/Controller/PersonaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/src/main/java/AccesoDatos/ut4/spring_boot/Dao/IPersonaDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/src/main/java/AccesoDatos/ut4/spring_boot/Entity/Persona.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/src/main/java/AccesoDatos/ut4/spring_boot/Entity/Puesto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/src/main/java/AccesoDatos/ut4/spring_boot/Service/PersonaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/src/main/resources/static/allPersonas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/src/main/resources/templates/addPersona.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EjercicioBaseDeDatosPersonas21-25-2025/src/test/java/AccesoDatos/ut4/spring_boot/ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/src/main/java/UT4_A4_CRUD/Ut4A4CrudApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/src/main/java/UT4_A4_CRUD/controller/ClienteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/src/main/java/UT4_A4_CRUD/model/dao/IClienteDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/src/main/java/UT4_A4_CRUD/model/entity/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/src/main/java/UT4_A4_CRUD/model/service/ClienteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/src/main/resources/templates/cliente_add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/src/main/resources/templates/cliente_edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/src/main/resources/templates/clientes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/src/main/resources/templates/mostrar_clientes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UT4_A4_CRUD_SOLUCION/src/test/java/UT4_A4_CRUD/Ut4A4CrudApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WEEC-PCC-AIG-2024-09-24T13_16_23.823040032-73461405a.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/java/com/example/demo/Persona/Persona.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/java/com/example/demo/Service/PersonaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/java/com/example/demo/dao/IPersonaDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/resources/saludo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/resources/static/fomrPersona.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/resources/static/mostrar_clientes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/resources/static/personas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/resources/static/resultados.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/resources/static/saludo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/resources/templates/add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/main/resources/templates/añadirPersona.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ejercicioConpersonasUt4SpringBoot/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/src/main/java/es/marianasanz/acda/repaso/ut4/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/src/main/java/es/marianasanz/acda/repaso/ut4/controller/PersonaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/src/main/java/es/marianasanz/acda/repaso/ut4/model/dao/IPersonaDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/src/main/java/es/marianasanz/acda/repaso/ut4/model/entity/Persona.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/src/main/java/es/marianasanz/acda/repaso/ut4/model/service/PersonaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/src/main/resources/templates/personas/detalles.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/src/main/resources/templates/personas/guardar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/src/main/resources/templates/personas/listar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../es.marianasanz.acda.repaso.ut4/src/test/java/es/marianasanz/acda/repaso/ut4/ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AccesoDatos/ut4/spring_boot/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AccesoDatos/ut4/spring_boot/controller/PersonaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AccesoDatos/ut4/spring_boot/model/dao/PersonaDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AccesoDatos/ut4/spring_boot/model/entity/Persona.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AccesoDatos/ut4/spring_boot/model/service/PersonasService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/personasAll.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AccesoDatos/ut4/spring_boot/ApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2xaHkGBU80TeR4YjWMIiTea0Zg7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Unnamed.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Maven.spring-boot [clean].executor": "Run",
+    "Maven.spring-boot [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="AccesoDatos.ut4.spring_boot.model.dao" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn install" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AccesoDatos.ut4.spring_boot.Application" />
+      <module name="spring-boot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="87afc606-43be-48d2-ad28-f496da038fc5" name="Changes" comment="" />
+      <created>1748169405380</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748169405380</updated>
+    </task>
+    <servers />
+  </component>
+</project>
