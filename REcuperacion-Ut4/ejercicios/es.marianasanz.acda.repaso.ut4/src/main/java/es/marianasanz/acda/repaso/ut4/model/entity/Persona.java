@@ -132,4 +132,20 @@ public class Persona {
     public void setSedeTrabaja(String sedeTrabaja) {
         this.sedeTrabaja = sedeTrabaja;
     }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nif='" + nif + '\'' +
+                ", nss='" + nss + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", anoNacimiento=" + anoNacimiento +
+                ", salario=" + salario +
+                ", puesto='" + puesto + '\'' +
+                ", fechaAlta=" + fechaAlta +
+                ", fechaBaja=" + fechaBaja +
+                ", sedeTrabaja='" + sedeTrabaja + '\'' +
+                '}';
+    }
 }

@@ -25,13 +25,25 @@ public class PersonaService {
         return iPersonaDao.findAll();
     }
     public Integer save(Persona persona){
-        iPersonaDao.save(persona);
-        return 0;
-
+        if(persona!=null){
+            iPersonaDao.save(persona);
+            return 1;
+        }
+        return -1;
     }
     public void deleteById(String idPersona){
         iPersonaDao.deleteById(idPersona);
     }
+
+   public Integer delete(Persona persona){
+       if(persona!=null){
+           iPersonaDao.delete(persona);
+           return 1;
+       }
+       return -1;
+   }
+
+
 
 }
 //consultas de sql para posibles resoluciones de consultas de datos =

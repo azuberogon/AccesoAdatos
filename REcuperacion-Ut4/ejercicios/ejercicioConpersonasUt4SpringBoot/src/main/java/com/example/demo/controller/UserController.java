@@ -13,21 +13,75 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping(path="/crud")
+@RequestMapping(path="/persona")
 public class UserController {
-
-    //@@RequestParam String nif,
-    //                                          @RequestParam String nss,
-    //                                          @RequestParam String name,
-    //                                          @RequestParam String apellido,
-    //                                          @RequestParam String anyoNacimiento,
-    //                                          @RequestParam String fechaAlta,
-    //                                          @RequestParam String salario
-
-
 
     @Autowired
     private PersonaService personaService;
+
+
+    @GetMapping(path="/listar")
+    public String listar(Model model){
+        model.addAttribute("personas",personaService.listarPersona());
+        return "listar";
+    }
+
+
+    @GetMapping(path="/crear")
+    public String crearPersona(@RequestParam(name = "id")String id, Model model){
+        if (id != null){
+            model.addAttribute("persona", personaService.save(new Persona()));
+            model.addAttribute("editar",false );
+
+        }else{
+            model.addAttribute("persona", personaService.getById(id));
+            model.addAttribute("editar",true);
+
+        }
+        model.addAttribute("personas",personaService.listarPersona());
+        return "listar";
+    }
+
+    @PostMapping("/crear")
+    public String crearPersona(@ModelAttribute(name = "persona") Persona persona, Model model){
+        if (persona!=null){
+            personaService.save(persona);
+        }else System.out.println("errror en la inserccion");
+
+        return "listar";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @PostMapping(path="/add")
     public String addNewUser(@ModelAttribute Persona persona, Model model){
 
@@ -42,9 +96,9 @@ public class UserController {
     }
     @GetMapping(path="/add")
     public String addNewUser(Model model){
-       Persona per = new Persona();
-       model.addAttribute("persona",per);
-       return "add";//carga la plantilla perosna el nombre de
+        Persona per = new Persona();
+        model.addAttribute("persona",per);
+        return "add";//carga la plantilla perosna el nombre de
         //return findALll; te te ejecutaria el metodo princial
     }//plantilla es una plantilla pero va
     @GetMapping(path="/all")
@@ -75,6 +129,8 @@ public class UserController {
         return "addPersona";//carga la plantilla perosna el nombre de
         //return findALll; te te ejecutaria el metodo princial
     }//plantilla es una plantilla pero va
+
+
 
 
 }

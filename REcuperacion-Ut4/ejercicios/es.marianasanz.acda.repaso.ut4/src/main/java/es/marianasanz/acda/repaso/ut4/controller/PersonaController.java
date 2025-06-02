@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Arrays;
 //TODO No voy a usar los codigos que devuelven los metodos de servicio ya que no usamos paginas de errores.
 // En caso de error cargariamos codigo especifico
 
@@ -69,6 +71,8 @@ public class PersonaController {
         //return listarPersonas(model);
         //o mejor redirigir a la petición que gestiona el controlador que carga el listado
         return "redirect:/personas";
+        
+
     }
 
     //Eliminar datos de una persona a partir de su id (nif)
@@ -85,4 +89,9 @@ public class PersonaController {
         return "redirect:/personas";
     }
 
+
+
+
+
 }
+

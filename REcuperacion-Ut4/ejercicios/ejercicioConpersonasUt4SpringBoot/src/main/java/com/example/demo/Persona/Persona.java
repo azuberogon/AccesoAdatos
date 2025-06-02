@@ -1,10 +1,7 @@
 package com.example.demo.Persona;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import org.springframework.lang.NonNull;
 
@@ -17,20 +14,26 @@ public class Persona {
     @Column(name="nif", length = 9) // hay que referenciarlo con la tabla que es
     private String nif;
     //habria que validar los datos antes pero no hace falta para
-    @Column(length = 9,nullable = false)// notnull: nulable se hable
+    @Column(name="nss", length = 9,unique = true,nullable = false)// notnull: nulable se hable
     private String nss ;
-    @Column(length = 25)
-    private String nombre ;
-    @Column(length = 50)
-    private String apellido ;
+    @Column(name ="nombre" ,length = 25)
+    private String nombre;
+    @Column(name ="apellido", length = 50)
+    private String apellido;
     @Column(name= "año_Nacimiento")
-    private Integer anyoNacimiento ;
-
+    private Integer anyoNacimiento;
+    @Temporal(TemporalType.DATE)
+    @Column(name ="Fecha_Alta")
     private LocalDate fechaAlta;
+    @Column(name ="Salario")
     private Integer salario;
     //@Enum mirar como se hace lo de las tablas pero no va a caer en el cxamen
-    private Integer puesto;
+    @Column(name ="Puesto", columnDefinition = "'JEFE','EMPLEADO','LIMPIEZA','JUIBILADO'")
+    private String puesto;
+    @Temporal(TemporalType.DATE)
+    @Column(name ="Fecha_Baja")
     private LocalDate fecha_baja;
+    @Column(name ="Sede_Trabaja")
     private String sede_trabaja;
 
 
@@ -92,11 +95,11 @@ public class Persona {
         this.salario = salario;
     }
 
-    public Integer getPuesto() {
+    public String getPuesto() {
         return puesto;
     }
 
-    public void setPuesto(Integer puesto) {
+    public void setPuesto(String puesto) {
         this.puesto = puesto;
     }
 
